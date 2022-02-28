@@ -1,0 +1,45 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle {
+	display: none;
+}
+
+.toggle + label {
+	display: block;
+	width: 230px;
+	height: 102px;
+	border-radius: 59px;
+	background-color: var(--label);
+	cursor: pointer;
+}
+
+.toggle + label::before {
+	content: "";
+	width: 86px;
+	height: 86px;
+	position: relative;
+	display: block;
+	background-color: var(--light);
+	border-radius: 50%;
+	z-index: 1;
+	top: 8px;
+	left: 12px;
+}
