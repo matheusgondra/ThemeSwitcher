@@ -43,3 +43,11 @@ body {
 	top: 8px;
 	left: 12px;
 }
+
+.icon {
+	width: 94px;
+	height: 94px;
+	position: relative;
+	bottom: calc(94px - 12px);
+	left: calc(100% - 7px - 94px);
+}
