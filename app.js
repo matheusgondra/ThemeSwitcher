@@ -6,8 +6,6 @@ const $body = document.querySelector("body");
 let isChecked = $input.checked;
 
 const handleBackground = () => {
-   // isChecked ? $body.style.backgroundColor = "var(--dark)" : $body.style.backgroundColor = "var(--light)";
-
    if(isChecked) {
       $body.style.backgroundColor = "var(--dark)"
    } else {

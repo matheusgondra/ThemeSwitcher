@@ -70,17 +70,19 @@ body {
 } 
 
 .iconSun {
+	display: block;
 	width: 94px;
 	height: 94px;
-	position: absolute;
-	top: 45%;
-	left: 52%;
+	position: relative;
+	bottom: calc(100% - 20px);
+	left: calc(100% - 94px - 7px);
 }
 
 .iconMoon {
+	display: block;
 	width: 94px;
 	height: 94px;
-	position: absolute;
-	top: 45%;
-	left: 36%;
+	position: relative;
+	bottom: calc(100% - 20px);
+	left: calc(0% + 7px);
 }
