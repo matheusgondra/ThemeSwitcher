@@ -16,13 +16,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 500ms;
 }
 
 .toggle {
 	display: none;
 }
 
-.toggle + label {
+.toggleLabelOff {
 	display: block;
 	width: 230px;
 	height: 102px;
@@ -31,7 +32,7 @@ body {
 	cursor: pointer;
 }
 
-.toggle + label::before {
+.toggleLabelOff::before {
 	content: "";
 	width: 86px;
 	height: 86px;
@@ -42,12 +43,44 @@ body {
 	z-index: 1;
 	top: 8px;
 	left: 12px;
+	transition: 500ms;
 }
 
-.icon {
+.toggleLabelOn {
+	display: block;
+	width: 230px;
+	height: 102px;
+	border-radius: 59px;
+	background-color: var(--label);
+	cursor: pointer;
+}
+
+.toggleLabelOn::before {
+	content: "";
+	width: 86px;
+	height: 86px;
+	position: relative;
+	display: block;
+	background-color: var(--light);
+	border-radius: 50%;
+	z-index: 1;
+	top: 8px;
+	left: calc(100% - 86px - 11px);
+	transition: 500ms;
+} 
+
+.iconSun {
 	width: 94px;
 	height: 94px;
-	position: relative;
-	bottom: calc(94px - 12px);
-	left: calc(100% - 7px - 94px);
+	position: absolute;
+	top: 45%;
+	left: 52%;
+}
+
+.iconMoon {
+	width: 94px;
+	height: 94px;
+	position: absolute;
+	top: 45%;
+	left: 36%;
 }
