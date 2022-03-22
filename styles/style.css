@@ -19,6 +19,10 @@ body {
 	transition: 500ms;
 }
 
+.on {
+	background-color: var(--dark);
+}
+
 .toggle {
 	display: none;
 }

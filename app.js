@@ -1,20 +1,15 @@
 const $label = document.querySelector("#toggleLabel");
 const $imgIcon = document.querySelector("#icon");
-const $input = document.querySelector("#toggle");
 const $body = document.querySelector("body");
 
-let isChecked = $input.checked;
+let on = true;
 
 const handleBackground = () => {
-   if(isChecked) {
-      $body.style.backgroundColor = "var(--dark)"
-   } else {
-      $body.style.backgroundColor = "var(--light)";
-   }
+   $body.classList.toggle("on");
 }
 
 const handleIcon = () => {
-   if (isChecked) {
+   if(on) {
       $imgIcon.src = "./assets/moon.svg";
       $imgIcon.classList.remove("iconSun");
       $imgIcon.classList.add("iconMoon");
@@ -27,7 +22,7 @@ const handleIcon = () => {
 
 const handleButton = () => {
    handleIcon();
-   if(isChecked) {
+   if(on) {
       $label.classList.remove("toggleLabelOff");
       $label.classList.add("toggleLabelOn");
    } else {
@@ -39,9 +34,7 @@ const handleButton = () => {
 const handleToggle = () => {
    handleBackground();
    handleButton();
+   on = !on;
 }
 
-$label.addEventListener("click", () => {
-   isChecked = $input.checked;
-   handleToggle();
-})
+$label.addEventListener("click", handleToggle);
